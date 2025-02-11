@@ -10,14 +10,14 @@ def regula_falsi(x0,x1,eps=1e-5):
         print("f(x0) and f(x1) should have opposite signs.")
         return None
     
-    for i in range(4):
+    for i in range(100):
         x = x0 - ((x1 - x0) / (f(x1) - f(x0))) * f(x0)
 
         if abs(f(x)) < eps:
             print(f"Root is: {x:.6f}")
             return x
         
-        if f(x) * f(x0) > 0:
+        if f(x) * f(x0) < 0:
             x1 = x
         else:
             x0 = x
