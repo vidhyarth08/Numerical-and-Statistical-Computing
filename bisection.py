@@ -1,5 +1,4 @@
 #Another method to solve non-linear equations.
-import math as m
 
 def f(x):
     return x**3 - x - 11
