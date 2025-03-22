@@ -4,10 +4,10 @@ def f(x):
 def df(x):
     return 3*x**2
 
-def newton(x):
+def newton_raph(x):
     while abs(f(x)) > 1e-5:
         x = x - f(x)/df(x)
 
     return x
 
-print(newton(2))
+print(newton_raph(2))
